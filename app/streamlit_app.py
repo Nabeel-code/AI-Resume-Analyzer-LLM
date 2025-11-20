@@ -1,7 +1,11 @@
 # app_resume_analyzer.py
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
-from utils.resume_parser import extract_text_from_resume
-from utils.text_utils import (
+from src.resume_parser import extract_text_from_resume
+
+from src.text_utils import (
     extract_relevant_phrases,
     tfidf_similarity,
     extract_skills,
