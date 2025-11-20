@@ -18,7 +18,6 @@ Clean Streamlit UI
 
 Ready for deployment
 
-📂 Project Structure
 AI-Resume-Analyzer-LLM/
 │
 ├── src/
@@ -37,6 +36,7 @@ AI-Resume-Analyzer-LLM/
 │
 ├── requirements.txt
 └── README.md
+
 
 🧠 Tech Stack
 
