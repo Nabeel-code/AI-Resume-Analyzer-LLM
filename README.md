@@ -1,42 +1,26 @@
-AI Resume Analyzer – LLM-Powered Evaluation System
+AI Resume Analyzer (LLM + ATS Checker)
 
-A smart, LLM-powered resume analysis tool that extracts content from resumes, evaluates skills, performs ATS scoring, finds gaps, matches with job descriptions, and provides improvement suggestions. Built with Streamlit and Python.
+A smart, LLM-powered resume analysis tool that evaluates resumes against job descriptions using NLP, embeddings, and machine learning. Built with Python, Streamlit, spaCy, Scikit-learn, and Sentence Transformers.
 
-⭐ Features
+🚀 Features
 
-PDF text extraction and cleaning
+Resume Text Extraction
+Supports PDF, DOCX, and TXT resume formats.
 
-LLM-based resume content analysis
+JD Parsing & Skill Extraction
+Extracts required skills, keywords, and role expectations from any job description.
 
-ATS scoring engine
+Semantic Similarity using BERT Embeddings
+Compares resume content and JD using transformer-based embeddings.
 
-Skill-gap detection
+ATS Keyword Match Score
+Highlights missing keywords and role-specific gaps.
 
-JD-to-resume similarity score
+Recommendation Engine
+Suggests improvements to match industry standards.
 
-Clean Streamlit UI
-
-Ready for deployment
-
-AI-Resume-Analyzer-LLM/
-│
-├── src/
-│   ├── ats_scoring.py
-│   ├── jd_matcher.py
-│   ├── resume_parser.py
-│   ├── text_cleaner.py
-│   ├── text_utils.py
-│   └── utils.py
-│
-├── app/
-│   └── streamlit_app.py
-│
-├── assets/
-│   └── screenshots/
-│
-├── requirements.txt
-└── README.md
-
+Interactive UI (Streamlit)
+Clean, responsive app UI for quick resume evaluations.
 
 🧠 Tech Stack
 
@@ -44,27 +28,65 @@ Python
 
 Streamlit
 
-PyPDF2
+spaCy (NLP parsing)
+
+Sentence Transformers
 
 Scikit-learn
 
-Transformers / LLM APIs
+PyTorch
 
-NLTK / spaCy (optional)
+docx2txt
 
-🚀 Run Locally
-1. Install dependencies
+PDF parsing
+
+📁 Project Structure
+├── app/
+│   └── streamlit_app.py
+├── src/
+│   ├── resume_parser.py
+│   ├── jd_parser.py
+│   ├── similarity.py
+│   └── recommender.py
+├── assets/
+│   └── screenshots/
+│         ├── screenshot_home.png
+│         ├── screenshot_analysis.png
+│         └── screenshot_report.png
+├── utils/
+│   ├── text_cleaning.py
+│   └── helpers.py
+├── requirements.txt
+└── README.md
+
+🖼 Screenshots
+Home Screen
+
+Resume Analysis Output
+
+Generated Report
+
+▶️ Running Locally
+1. Create venv
+python -m venv venv
+.\venv\Scripts\activate
+
+2. Install dependencies
 pip install -r requirements.txt
 
-2. Start the app
+3. Run the app
 streamlit run app/streamlit_app.py
 
-🔮 Future Enhancements
+📌 Future Improvements
 
-Vector-based scoring (embeddings)
+Add AI-powered resume rewriting
 
-Cross-encoder reranking
+Add PDF export of ATS report
 
-Job-specific scoring profiles
+Add support for multiple resume versions
 
-Batch resume analysis
+Integrate a vector database for better skill ranking
+
+📜 License
+
+MIT License
